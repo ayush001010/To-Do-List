@@ -1,0 +1,276 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(125deg, #a600ff, #ff0088);
+}
+
+/* Background */
+.background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+/* Container */
+.container {
+    width: 400px;
+    max-height: 420px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+/* Header */
+.header {
+    width: 100%;
+    display: flex;
+    margin: 10px 0;
+}
+
+.header p {
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(31, 7, 188);
+    margin-right: 10px;
+}
+
+.header img {
+    width: 25px;
+    height: 25px;
+    margin-top: -2px;
+}
+
+/* Add Section */
+.add-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
+    border-radius: 16px;
+}
+
+.add-section input {
+    border: none;
+    outline: none;
+    font-size: 17px;
+    margin-left: 20px;
+}
+
+.add-button {
+    border: none;
+    width: 90px;
+    height: 40px;
+    /* margin-top: 6px;
+    margin-right: -20px;*/
+    
+    background-color: #ff6200;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: 0.4s;
+}
+
+.add-button:hover{
+    background-color: #c55815;
+}
+
+.add-button p {
+    color: #fff;
+    font-size: 17px;
+    font-weight: 545;
+}
+
+/* Content Area */
+.content-area {
+    width: 100%;
+    max-height: 290px;
+    margin-bottom: 30px; 
+}
+
+/* Task List */
+ul li {
+    
+    list-style: none;
+    font-size: 17px;
+    font-weight: 550;
+    padding-left: 30px;
+    margin-top: 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    left: 1px;
+    background-image: url('images/unchecked.png');
+    background-size: cover;
+    background-position: center;
+}
+
+ul li.checked {
+    color: #6c6b6b;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url('images/checked.png');
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    border-radius: 50%;
+    bottom: 6px;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    margin-right: 5px;
+    margin-bottom: 4px;
+    transition: 0.4s;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .header p {
+        font-size: 18px;
+    }
+
+    .add-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .add-section input {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+
+    .add-button {
+        width: 100%;
+        margin: 0;
+        font-size: 15px;
+    }
+
+    .content-area {
+        max-height: 200px;
+    }
+
+    ul li {
+        font-size: 15px;
+        padding-left: 20px;
+    }
+
+    ul li span {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 601px) and (max-width: 992px) {
+    .container {
+        width: 80%;
+    }
+
+    .header p {
+        font-size: 19px;
+    }
+
+    .add-section input {
+        font-size: 16px;
+    }
+
+    .add-button {
+        font-size: 16px;
+    }
+
+    .content-area {
+        max-height: 250px;
+    }
+
+    ul li {
+        font-size: 16px;
+        padding-left: 25px;
+    }
+
+    ul li span {
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+    }
+}
+
+/* PC Devices */
+@media (min-width: 993px) {
+    .container {
+        width: 400px;
+    }
+
+    .header p {
+        font-size: 20px;
+    }
+
+    .add-section input {
+        font-size: 17px;
+    }
+
+    .add-button {
+        font-size: 17px;
+    }
+
+    .content-area {
+        max-height: 290px;
+    }
+
+    ul li {
+        font-size: 17px;
+        padding-left: 30px;
+    }
+
+    ul li span {
+        width: 35px;
+        height: 35px;
+        font-size: 22px;
+    }
+}
