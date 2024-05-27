@@ -175,19 +175,13 @@ ul li span:hover {
         font-size: 18px;
     }
 
-    .add-section {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
     .add-section input {
-        margin-bottom: 10px;
+        
         font-size: 15px;
     }
 
     .add-button {
-        width: 100%;
-        margin: 0;
+        
         font-size: 15px;
     }
 
